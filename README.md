@@ -70,31 +70,31 @@ DEVA_LLM_MODEL=dolphin-mistral
 ```
 
 For Gemini:
-
+```
 DEVA_LLM_PROVIDER=gemini
 DEVA_LLM_MODEL=gemini-1.5-pro
 GEMINI_API_KEY=your_api_key_here
+```
+## 📦 Tech Stack
 
-📦 Tech Stack
+- LangChain
 
-LangChain
+- ChromaDB
 
-ChromaDB
+- Ollama
 
-Ollama
+- HuggingFace Sentence Transformers
 
-HuggingFace Sentence Transformers
+- Typer
 
-Typer
+### 🛣️ Roadmap
 
-🛣️ Roadmap
+- [] Streaming responses
 
-Streaming responses
+- [] Multiple vector store backends
 
-Multiple vector store backends
+- [] Agent + tool calling
 
-Agent + tool calling
+- [] Web UI
 
-Web UI
-
-Plugin system
+- [] Plugin system
