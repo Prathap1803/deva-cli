@@ -19,91 +19,97 @@ This guide helps you install and use Deva locally.
 ```bash
 git clone https://github.com/yourusername/deva-cli.git
 cd deva-cli
-
+```
 Install in Editable Mode
+```
 pip install -e .
+```
 
-🤖 LLM Setup
-Option 1: Local (Ollama)
-
+##🤖 LLM Setup
+###Option 1: Local (Ollama)
+```
 Install Ollama: https://ollama.com
-
+```
 Pull a model:
-
+```
 ollama pull dolphin-mistral
-
+```
 
 Create .env:
-
+```
 DEVA_LLM_PROVIDER=ollama
 DEVA_LLM_MODEL=dolphin-mistral
-
-Option 2: Gemini (Cloud)
+```
+###Option 2: Gemini (Cloud)
 
 Get an API key from Google AI Studio
 
 Install dependency:
-
+```
 pip install langchain-google-genai
-
+```
 
 Configure .env:
-
+```
 DEVA_LLM_PROVIDER=gemini
 DEVA_LLM_MODEL=gemini-1.5-pro
 GEMINI_API_KEY=your_key_here
-
-📂 Ingest Documents
+```
+##📂 Ingest Documents
+```
 deva ingest ./data
-
+```
 Reset Vector Database
+```
 deva ingest ./data --reset
+```
 
+##Supported formats:
 
-Supported formats:
+- PDF
 
-PDF
+- DOCX
 
-DOCX
+- TXT
 
-TXT
-
-💬 Chat with Your Data
+##💬 Chat with Your Data
+```
 deva chat
-
+```
 
 Exit with:
-
+``
 exit
 quit
-
-⚙️ CLI Commands
+```
+##⚙️ CLI Commands
 Command	Description
+```
 deva ingest PATH	Index documents
 deva ingest PATH --reset	Rebuild database
 deva chat	Interactive chat
-🧠 Best Practices
+```
+##🧠 Best Practices
 
-Use clean, text-based PDFs
+- Use clean, text-based PDFs
 
-Avoid scanned documents
+- Avoid scanned documents
 
-Reset DB after major document changes
+- Reset DB after major document changes
 
-Keep documents topic-focused
+- Keep documents topic-focused
 
-🛠️ Troubleshooting
-
-No answers returned
-
-Documents not ingested
-
-Retriever k too low
-
-Query outside document scope
-
+##🛠️ Troubleshooting
 LLM not responding
 
-Ollama not running
+    - Ensure Ollama is running
 
-Invalid API key
+    - Check API keys
+
+Empty answers
+
+ - Documents not ingested
+
+ - Retriever k too low
+
+ - Question outside document scope
