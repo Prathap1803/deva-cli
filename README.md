@@ -89,12 +89,12 @@ GEMINI_API_KEY=your_api_key_here
 
 ### 🛣️ Roadmap
 
-- [] Streaming responses
+- [ ] Streaming responses
 
-- [] Multiple vector store backends
+- [ ] Multiple vector store backends
 
-- [] Agent + tool calling
+- [ ] Agent + tool calling
 
-- [] Web UI
+- [ ] Web UI
 
-- [] Plugin system
+- [ ] Plugin system
