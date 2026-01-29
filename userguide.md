@@ -16,17 +16,18 @@ This guide helps you install and use Deva locally.
 
 ### Clone Repository
 
-```bash
+```
 git clone https://github.com/yourusername/deva-cli.git
 cd deva-cli
 ```
-Install in Editable Mode
+## Install in Editable Mode
+
 ```
 pip install -e .
 ```
 
-##🤖 LLM Setup
-###Option 1: Local (Ollama)
+## 🤖 LLM Setup
+### Option 1: Local (Ollama)
 ```
 Install Ollama: https://ollama.com
 ```
@@ -55,7 +56,7 @@ DEVA_LLM_PROVIDER=gemini
 DEVA_LLM_MODEL=gemini-1.5-pro
 GEMINI_API_KEY=your_key_here
 ```
-##📂 Ingest Documents
+## 📂 Ingest Documents
 ```
 deva ingest ./data
 ```
@@ -64,7 +65,7 @@ Reset Vector Database
 deva ingest ./data --reset
 ```
 
-##Supported formats:
+## Supported formats:
 
 - PDF
 
@@ -72,24 +73,24 @@ deva ingest ./data --reset
 
 - TXT
 
-##💬 Chat with Your Data
+## 💬 Chat with Your Data
 ```
 deva chat
 ```
 
 Exit with:
-``
+```
 exit
 quit
 ```
-##⚙️ CLI Commands
+## ⚙️CLI Commands
 Command	Description
 ```
 deva ingest PATH	Index documents
 deva ingest PATH --reset	Rebuild database
 deva chat	Interactive chat
 ```
-##🧠 Best Practices
+## 🧠 Best Practices
 
 - Use clean, text-based PDFs
 
@@ -99,17 +100,17 @@ deva chat	Interactive chat
 
 - Keep documents topic-focused
 
-##🛠️ Troubleshooting
+## 🛠️ Troubleshooting
 LLM not responding
 
-    - Ensure Ollama is running
+- Ensure Ollama is running
 
-    - Check API keys
+- Check API keys
 
 Empty answers
 
- - Documents not ingested
+- Documents not ingested
 
- - Retriever k too low
+- Retriever k too low
 
- - Question outside document scope
+- Question outside document scope
