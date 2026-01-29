@@ -41,7 +41,7 @@ Create .env:
 DEVA_LLM_PROVIDER=ollama
 DEVA_LLM_MODEL=dolphin-mistral
 ```
-###Option 2: Gemini (Cloud)
+### Option 2: Gemini (Cloud)
 
 Get an API key from Google AI Studio
 
