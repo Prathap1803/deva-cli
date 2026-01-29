@@ -44,3 +44,57 @@ Deva is modular by design:
 git clone https://github.com/yourusername/deva-cli.git
 cd deva-cli
 pip install -e .
+```
+
+### 2. (Optional) Install Ollama
+```
+https://ollama.com
+ollama pull dolphin-mistral
+
+```
+### 3. Ingest Documents
+```
+deva ingest ./data
+```
+
+### 4. Start Chat
+```
+deva chat
+```
+## 🔐 Environment Configuration
+
+Create a .env file:
+```
+DEVA_LLM_PROVIDER=ollama
+DEVA_LLM_MODEL=dolphin-mistral
+```
+
+For Gemini:
+
+DEVA_LLM_PROVIDER=gemini
+DEVA_LLM_MODEL=gemini-1.5-pro
+GEMINI_API_KEY=your_api_key_here
+
+📦 Tech Stack
+
+LangChain
+
+ChromaDB
+
+Ollama
+
+HuggingFace Sentence Transformers
+
+Typer
+
+🛣️ Roadmap
+
+Streaming responses
+
+Multiple vector store backends
+
+Agent + tool calling
+
+Web UI
+
+Plugin system
