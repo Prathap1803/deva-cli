@@ -1,16 +1,13 @@
+import os
 
-from langchain_ollama import OllamaLLM
-from langchain_huggingface import HuggingFaceEmbeddings
+DATA_DIR = os.getenv("DEVA_DATA_DIR", "./data")
+CHROMA_DIR = os.getenv("DEVA_CHROMA_DIR", "./deva_cli/storage/chroma_db")
 
-DATA_DIR = "./data"
-CHROMA_DIR = "./deva_cli/storage/chroma_db"
+LLM_PROVIDER = os.getenv("DEVA_LLM_PROVIDER", "ollama")
+LLM_MODEL = os.getenv("DEVA_LLM_MODEL", "dolphin-mistral")
 
-llm = OllamaLLM(
-    model="dolphin-mistral",
-    base_url="http://localhost:11434",
-    temperature=0.3
+EMBEDDINGS_PROVIDER = os.getenv(
+    "DEVA_EMBEDDINGS_PROVIDER", "huggingface"
 )
 
-embeddings = HuggingFaceEmbeddings(
-    model_name="sentence-transformers/all-MiniLM-L6-v2"
-)
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")

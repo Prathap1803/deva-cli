@@ -3,7 +3,14 @@
 import os
 import shutil
 from langchain_chroma import Chroma
-from deva.config import embeddings, CHROMA_DIR
+from deva.config import EMBEDDINGS_PROVIDER, GEMINI_API_KEY, CHROMA_DIR
+from deva.providers.embeddings import get_embeddings
+
+embeddings = get_embeddings(
+    provider=EMBEDDINGS_PROVIDER,
+    api_key=GEMINI_API_KEY,
+)
+
 
 def get_or_create_vectorstore(reset: bool = False):
     """
